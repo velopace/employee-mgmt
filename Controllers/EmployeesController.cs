@@ -76,6 +76,23 @@ namespace employee_mgmt.Controllers
 
             return Ok(employee);
         }
+
+        [HttpDelete]
+        [Route("{id:Guid}")]
+        public async Task<IActionResult> DeleteEmployee([FromRoute] Guid id)
+        {
+            var employee = await _employeeMgmtDbContext.Employees.FindAsync(id);
+
+            if (employee == null)
+            {
+                return NotFound();
+            }
+
+            _employeeMgmtDbContext.Employees.Remove(employee);
+            await _employeeMgmtDbContext.SaveChangesAsync();
+
+            return Ok(employee);
+        }
     }
 }
 

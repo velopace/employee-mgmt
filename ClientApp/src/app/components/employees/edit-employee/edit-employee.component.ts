@@ -38,4 +38,10 @@ export class EditEmployeeComponent implements OnInit {
       this.router.navigate(['employees']);
     });
   }
+
+  deleteEmployee(id: string) {
+    this.employeesService.deleteEmployee(id).subscribe(res => {
+      this.router.navigate(['employees']);
+    })
+  }
 }
