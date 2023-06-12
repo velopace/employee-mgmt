@@ -9,7 +9,8 @@ import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { FetchDataComponent } from './components/fetch-data/fetch-data.component';
-import { EmployeeListComponent } from './components/employee-list/employee-list.component';
+import { EmployeeListComponent } from './components/employees/employee-list/employee-list.component';
+import { AddEmployeeComponent } from './components/employees/add-employee/add-employee.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EmployeeListComponent } from './components/employee-list/employee-list.
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    AddEmployeeComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -29,6 +31,7 @@ import { EmployeeListComponent } from './components/employee-list/employee-list.
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'employees', component: EmployeeListComponent },
+      { path: 'employees/add', component: AddEmployeeComponent },
     ])
   ],
   providers: [],
