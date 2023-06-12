@@ -38,6 +38,7 @@
     <None Remove="ClientApp\src\app\components\employees\" />
     <None Remove="ClientApp\src\app\components\employees\add-employee\" />
     <None Remove="ClientApp\src\app\components\employees\employee-list\" />
+    <None Remove="ClientApp\src\app\components\employees\edit-employee\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -53,6 +54,7 @@
     <Folder Include="ClientApp\src\app\components\employees\" />
     <Folder Include="ClientApp\src\app\components\employees\add-employee\" />
     <Folder Include="ClientApp\src\app\components\employees\employee-list\" />
+    <Folder Include="ClientApp\src\app\components\employees\edit-employee\" />
   </ItemGroup>
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
